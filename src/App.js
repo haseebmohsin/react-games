@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import AppContext from './AppContext';
+import { store } from './data/store';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState(store);
+  const { isSidebarOpen } = data;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ data, setData }}>
+      <div className='app'>
+        <Header />
+        <div className='content'>
+          <Sidebar />
+
+          <div className={`main-content ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
+            <Outlet />
+          </div>
+        </div>
+      </div>
+    </AppContext.Provider>
   );
 }
 
