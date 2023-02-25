@@ -1,6 +1,21 @@
 .header {
   background-color: var(--header-bg);
   color: var(--header-text);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+@media (max-width: 991px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    z-index: 999;
+  }
 }

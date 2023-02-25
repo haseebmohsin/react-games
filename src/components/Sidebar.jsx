@@ -12,10 +12,10 @@ function Sidebar() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 992) {
-        setData({ ...data, isSidebarOpen: true });
-      } else {
+      if (window.innerWidth <= 992) {
         setData({ ...data, isSidebarOpen: false });
+      } else {
+        setData({ ...data, isSidebarOpen: true });
       }
     }
 
