@@ -1,8 +1,8 @@
 # React Game Hub
 
-#### Access URL: https://react-games-haseebmohsin.vercel.app
+#### Website URL: https://react-games-haseebmohsin.vercel.app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This is a web application built using React, containing popular games like Tic Tac Toe and Snake. The purpose of this website is to provide a fun and engaging platform for users to play their favorite games online.
 
